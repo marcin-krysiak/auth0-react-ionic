@@ -1,7 +1,7 @@
 {
   "author": "Marcin Krysiak",
   "name": "auth0-react-ionic",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Auth0 SDK for React Single Page Applications (SPA) with ionic framework",
   "keywords": [
     "auth0",
@@ -21,7 +21,7 @@
   "types": "dist/index.d.ts",
   "module": "dist/auth0-react.esm.js",
   "scripts": {
-    "build": "npm run lint && rollup -c --environment NODE_ENV:production",
+    "build": "rollup -c --environment NODE_ENV:production",
     "lint": "eslint --ext=tsx ./src ./__tests__",
     "start": "rollup -cw",
     "test": "jest --coverage",
@@ -97,12 +97,7 @@
     "react": "^16.11.0 || ^17",
     "react-dom": "^16.11.0 || ^17"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
-    "auth0-spa-js-ionic": "1.15.2"
+    "auth0-spa-js-ionic": "^1.15.3"
   }
 }

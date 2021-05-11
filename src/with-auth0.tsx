@@ -28,6 +28,8 @@ const withAuth0 = <P extends WithAuth0Props>(
 ): ComponentType<Omit<P, keyof WithAuth0Props>> => (props): JSX.Element => (
   <Auth0Context.Consumer>
     {(auth: Auth0ContextInterface): JSX.Element => (
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
       <Component auth0={auth} {...(props as P)} />
     )}
   </Auth0Context.Consumer>
